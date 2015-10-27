@@ -4,6 +4,7 @@ using System.Collections;
 public class PlCtrl : MonoBehaviour
 {
 	public float speed = 1f;
+	public P47Animation anim;
 
 	// Use this for initialization
 	void Start()
@@ -33,6 +34,8 @@ public class PlCtrl : MonoBehaviour
 		{
 			dir.x = 1f;
 		}
+
+		anim.input = dir.x;
 
 		transform.Translate(dir.normalized * Time.deltaTime * speed);
 	}
